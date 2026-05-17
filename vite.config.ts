@@ -40,6 +40,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{js,css,html,ico,png,svg}"],
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
       },
     }),
   ],
@@ -50,11 +51,13 @@ export default defineConfig({
   },
   base: "./",
   build: {
-    rollupOptions: {
+    rolldownOptions: {
       output: {
-        manualChunks: {
-          echarts: ["echarts", "echarts-for-react"],
-          excel: ["exceljs"],
+        codeSplitting: {
+          groups: [
+            { name: "echarts", test: /echarts|echarts-for-react/ },
+            { name: "excel", test: /exceljs/ },
+          ],
         },
       },
     },
