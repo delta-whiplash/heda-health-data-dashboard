@@ -1,4 +1,10 @@
 {
+  "consent": {
+    "title": "Notice sur le traitement des données de santé",
+    "description": "Cette application traite vos données de santé (sommeil, poids, fréquence cardiaque, etc.) localement dans votre navigateur. Aucune donnée n'est envoyée à un serveur. En continuant, vous consentez au traitement local de vos données de santé personnelles.",
+    "accept": "Je comprends",
+    "reject": "Refuser"
+  },
   "common": {
     "close": "Fermer",
     "cancel": "Annuler",
@@ -211,7 +217,7 @@
     },
     "privacy": {
       "title": "Note sur la confidentialité :",
-      "description": "Toutes les données sont traitées localement dans votre navigateur. Rien n'est envoyé à un serveur. Les données sont stockées dans IndexedDB pour des chargements ultérieurs plus rapides."
+      "description": "Toutes les données sont traitées localement dans votre navigateur. Rien n'est envoyé à un serveur. Les données sont stockées non chiffrées dans IndexedDB pour des chargements ultérieurs plus rapides. Vous pouvez exporter ou supprimer vos données à tout moment."
     },
     "stats": {
       "seasonTitle": "Statistiques par saison",

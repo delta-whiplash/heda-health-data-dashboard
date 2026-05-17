@@ -1,4 +1,10 @@
 {
+  "consent": {
+    "title": "Health Data Processing Notice",
+    "description": "This app processes your health data (sleep, weight, heart rate, etc.) locally in your browser. No data is sent to any server. By continuing, you consent to local processing of your personal health data.",
+    "accept": "I Understand",
+    "reject": "Decline"
+  },
   "common": {
     "close": "Close",
     "cancel": "Cancel",
@@ -211,7 +217,7 @@
     },
     "privacy": {
       "title": "Privacy Note:",
-      "description": "All data is processed locally and offline in your browser. Nothing is sent to any server."
+      "description": "All data is processed locally and offline in your browser. Nothing is sent to any server. Data is stored unencrypted in IndexedDB for faster loading. You can export or delete your data at any time."
     },
     "stats": {
       "seasonTitle": "Season Stats",

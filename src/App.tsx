@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { ConsentBanner } from "@/components/ConsentBanner";
 import { Dashboard } from "@/components/Dashboard";
 import { LanguageSwitcher } from "@/components/dashboard/LanguageSwitcher";
 import { FileUpload } from "@/components/FileUpload";
@@ -264,6 +265,7 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      <ConsentBanner />
     </main>
   );
 }

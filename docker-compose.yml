@@ -1,0 +1,24 @@
+services:
+  heda:
+    build:
+      context: .
+    image: heda:latest
+    container_name: heda
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /var/cache/nginx:size=10m,mode=1777,uid=101,gid=101
+      - /var/run:size=1m,mode=1777,uid=101,gid=101
+      - /tmp:size=1m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    ports:
+      - "127.0.0.1:8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
